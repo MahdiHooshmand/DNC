@@ -1,0 +1,7 @@
+In this project, three 2-axis CNC laser devices, each with an axis travel range of approximately 30 cm and controlled by the Marlin framework, will be integrated along with several feeders equipped with unidirectional stepper motors. All these devices will be controllable via the UART protocol and will connect to a computer through ESP32 microcontrollers and the Modbus protocol using MicroPython.
+
+On the computer side, a simple graphical interface will be provided to execute commands such as sending G-code to the Marlin frameworks, zeroing the devices, adjusting G-code offsets, and scaling G-codes. Additionally, a simple, cost-effective, and aesthetically pleasing method will be used for covering the electronic circuits.
+
+If the initial system proves successful, the next development steps will involve replacing the Marlin frameworks with MicroPython-based codes. The communication protocol will be upgraded to socket programming, managed by a Linux server and the Django framework. The graphical interface will also be redesigned using React.
+
+This will enable features such as adding VMM functionality as CNC and using image processing for real-time closed-loop feedback, ultimately achieving a final product precision of 0.1 mm. During this process, motors, drives, microswitches, and power transmission couplings may be redesigned and adjusted. The installation, assembly, and calibration details of these components will also be documented in this repository.
