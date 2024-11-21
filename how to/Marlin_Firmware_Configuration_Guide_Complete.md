@@ -1,3 +1,58 @@
+# Marlin Framework Documentation
+
+## Introduction
+This document serves as a comprehensive guide for configuring and compiling Marlin firmware, particularly for users working with RAMPS hardware. Whether you're a beginner or an advanced user, this guide will help you optimize your firmware for your 3D printer.
+
+## Table of Contents
+1. [Compatibility with RAMPS Hardware](#1-compatibility-with-ramps-hardware)
+2. [Recommended Tools for Compiling Marlin](#2-recommended-tools-for-compiling-marlin)
+3. [Setting Up VSCode for Marlin](#3-setting-up-vscode-for-marlin)
+    - [Installing Required Extensions](#installing-required-extensions)
+    - [Opening the Marlin Project Folder](#opening-the-marlin-project-folder)
+    - [Locating the Configuration Files](#locating-the-configuration-files)
+    - [Disabling the Boot Screen](#disabling-the-boot-screen)
+    - [Custom Boot and Status Screen Images](#custom-boot-and-status-screen-images)
+4. [Configuring the Serial Port](#4-configuring-the-serial-port)
+5. [Disabling Bluetooth and Wi-Fi](#5-disabling-bluetooth-and-wi-fi)
+6. [Troubleshooting Common Issues](#6-troubleshooting-common-issues)
+7. [Further Reading](#7-further-reading)
+
+## 1. Compatibility with RAMPS Hardware
+When using Marlin as the firmware framework alongside RAMPS as the middleware, it is recommended to utilize versions prior to Marlin 2.0.5. This is because RAMPS is an older hardware platform and exhibits better compatibility with earlier versions of Marlin firmware.  
+For the best stability and performance, it is advisable to use the Marlin 2.0.x bugfix branch, as it includes important updates and fixes for enhanced functionality.
+
+## 2. Recommended Tools for Compiling Marlin
+To compile Marlin firmware, it is highly recommended to use Visual Studio Code (VSCode). Unlike other tools, such as Arduino IDE, certain versions of Marlin cannot be compiled using Arduino, and some versions are only compilable on Ubuntu operating systems. However, these limitations do not apply to VSCode, making it the preferred choice for seamless and efficient compilation across different platforms.
+
+## 3. Setting Up VSCode for Marlin
+
+### Installing Required Extensions
+- Open VSCode and navigate to the Extensions marketplace.
+- Search for and install the following extensions:
+    - **Auto Build Marlin**: Provides tools and settings to streamline configuration and compilation of Marlin firmware.
+    - **PlatformIO IDE Extension**:
+        - A crucial tool for building and uploading the firmware, offering compatibility with various microcontroller platforms.
+        - **Note**: When starting this extension, it requires a Python virtual environment (venv) with Python version 3.6 or higher. To set this up, open the Marlin project folder in the terminal and run the following command:
+        ```bash
+        sudo apt install python3-venv
+        ```
+    - **C/C++ Extension**: Enables IntelliSense, code navigation, and debugging support for Marlin’s C++ codebase.
+
+### Opening the Marlin Project Folder
+- From the VSCode menu, click on `File > Open Folder`.
+- Select the folder containing the Marlin project files that you have downloaded.
+- This will load the Marlin project into VSCode, allowing you to configure and compile the firmware.
+
+### Locating the Configuration Files
+- Inside the project folder, navigate to the Marlin directory.
+- Locate the `Configuration.h` file. This file contains the primary configuration settings for the firmware.
+- Open `Configuration.h` in the VSCode editor to begin customizing the firmware for your specific hardware and printer settings.
+
+### Disabling the Boot Screen
+To prevent the Marlin logo from appearing on the display during boot, locate the `SHOW_BOOTSCREEN` option in `Configuration.h`.  
+Comment out the line by adding `//` at the beginning of the line:
+```cpp
+// #define SHOW_BOOTSCREEN
 
 ### Custom Boot and Status Screen Images
 To display your custom start-up image (e.g., a logo or a welcome screen), enable the following options in `Configuration.h`:
