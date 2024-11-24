@@ -54,8 +54,8 @@ This guide explains step-by-step how to configure **LightBurn** for optimal use.
 
 ## Step 4: Adjust Device Settings
 
-1. From the top menu, navigate to **Edit** > **Device Settings**.
-   ![Device Setting Menu](images/device_settings_menu.png)
+1. From the top menu, navigate to **Edit** > **Device Settings**.  
+![Device Setting Menu](images/device_settings_menu.png)
 2. In the **Custom GCode** tab:
    - Replace **Air On (M8)** with `;M8`.
    - Replace **Air Off (M9)** with `;M9`.  
