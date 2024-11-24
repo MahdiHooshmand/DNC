@@ -38,7 +38,7 @@ This guide explains step-by-step how to configure **LightBurn** for optimal use.
 
 1. In the **Laser** tab, ensure the correct device (e.g., **Febina**) is selected in the **Devices** dropdown.  
 2. This ensures the imported settings are applied to your workspace.  
-   ![Laser Tab](path-to-your-image.png)
+   ![Laser Tab](image/import_device.png)
 
 ---
 
@@ -47,17 +47,19 @@ This guide explains step-by-step how to configure **LightBurn** for optimal use.
 1. In the **Laser** tab:
    - Set **Start From** to **Current Position**.
    - Set **Job Origin** to **bottom-left**.  
-   ![Laser Starting Position](path-to-your-image.png)
+   ![Laser Starting Position](image/position_settings.png)
 2. These settings allow the laser to begin operations from the current physical location.
 
 ---
 
 ## Step 4: Adjust Device Settings
 
-1. From the top menu, navigate to **Edit** > **Device Settings**.  
+1. From the top menu, navigate to **Edit** > **Device Settings**.
+![Device Setting Menu](image/device_settings_menu.png)
 2. In the **Custom GCode** tab:
    - Replace **Air On (M8)** with `;M8`.
    - Replace **Air Off (M9)** with `;M9`.  
+   ![M8 M9](image/m8m9.png)
 3. These changes disable air control commands in the GCode, which is compatible with devices lacking air control functionality.  
 4. Save the settings by clicking **OK**.
 
@@ -66,11 +68,14 @@ This guide explains step-by-step how to configure **LightBurn** for optimal use.
 ## Step 5: General Settings Configuration
 
 1. Open **Edit** > **Settings**.  
+![Settings Menu](image/settings_menu.png)
 2. In the **Editor Settings** tab:
    - Disable **Automatically check for updates**.  
+   ![Turn Off Update](image/turn_off_update.png)
 3. In the **Import/Export** tab:
    - Set **Auto-Close Tolerance (mm)** to **0.005**.
    - Set **Curve Tolerance (mm)** to **0.005**.  
+   ![Tolerances](image/tolerances.png)
 4. Save changes by clicking **OK**.
 
 ---
