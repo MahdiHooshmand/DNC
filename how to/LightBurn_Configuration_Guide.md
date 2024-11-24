@@ -19,7 +19,7 @@ This guide explains step-by-step how to configure **LightBurn** for optimal use.
 
 1. Open **LightBurn** and navigate to the **Laser** tab on the right-hand side.  
 2. Click on **Devices** to open the device configuration window.  
-   ![Devices Button]("images/devices_button.png")  
+   ![Devices Button]("how%20to/images/devices_button.png")  
 3. Use the **Import** button and select the file `device.lbdev` from your repository.  
 4. The imported device configuration will:
    - Set a custom workspace with dimensions **300mm x 300mm**.
