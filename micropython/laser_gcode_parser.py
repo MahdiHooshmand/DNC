@@ -67,8 +67,8 @@ class GcodeParser:
         self.last_s = 0.0
         self.remaining_x = 0.0
         self.remaining_y = 0.0
-        self.pulse = 0.005
-        self.max_f = 1000
+        self.pulse = 0.02
+        self.max_f = 20
         self.m_commands = {
             "2": "Ignoring end of gcode",
             "02": "Ignoring end of gcode",
@@ -151,15 +151,15 @@ class GcodeParser:
     def _adjust_coordinates(self, x, y):
         """
         Adjust and round the input coordinates based on the pulse duration.
-    
+
         This method adjusts the input coordinates by adding any remaining distance
         from previous operations, then rounds the result based on the pulse duration.
         It also updates the remaining distance for future operations.
-    
+
         Parameters:
         x (float): The input X-coordinate to be adjusted.
         y (float): The input Y-coordinate to be adjusted.
-    
+
         Returns:
         tuple: A tuple containing two integers:
             - round_x (int): The adjusted and rounded X-coordinate.
@@ -289,7 +289,8 @@ class GcodeParser:
             else:
                 print(f"ERROR - unknown line:{line}")
                 line = ""
-    
+
+
 def parser(self, input_file, output_file):
     """
     Parse a G-code file and write corresponding CNC commands to an output file.
